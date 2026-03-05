@@ -1,0 +1,208 @@
+/* Dashboard Layout Logic */
+body {
+    background-color: #f8fafc; /* Clean background */
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #0f172a; /* Dark navy professional theme */
+    color: white;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+.main {
+    margin-left: 260px; /* Pushes content to the right of the sidebar */
+    padding: 40px;
+    min-height: 100vh;
+}
+
+/* Glass Navbar inside Dashboard */
+.glass-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* Dashboard Cards (White Glass) */
+.card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Sidebar Links Styling */
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebar i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+/* Sidebar Layout Fix */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column; /* Allows mt-auto or flex-grow to work */
+    background: #0f172a;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+/* Restore the Blue Logo Icon */
+.sidebar-logo {
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    background: #2563eb; /* Your primary blue */
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.logo-name {
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.5px;
+}
+
+/* Push Account section to bottom */
+.sidebar-footer {
+    margin-top: auto; /* This is the magic line that pushes it down */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+.main {
+    margin-left: 260px; /* Must match sidebar width exactly */
+    padding: 30px;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+/* Payment Page Specific Styles */
+
+/* Glass Payment Form */
+.payment-form-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Revenue Badge */
+.revenue-display {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.revenue-display h2 {
+    margin: 0;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+/* Transaction Table Glass Style */
+.payment-table-container {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    margin-top: 2rem;
+}
+
+.payment-table-container table {
+    margin-bottom: 0;
+}
+
+.payment-table-container thead {
+    background: #f8fafc;
+}
+
+.payment-table-container th {
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 1.2rem;
+}
+
+.payment-table-container td {
+    padding: 1.2rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Status Badges */
+.badge-paid {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+/* Form Inputs for Payments */
+.payment-input {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    padding: 0.8rem 1rem !important;
+}
+
+.payment-input:focus {
+    border-color: var(--primary-blue) !important;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1) !important;
+}
